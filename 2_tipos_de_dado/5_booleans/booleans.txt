@@ -1,0 +1,47 @@
+Booleans
+
+• Serve para guardar um valor de uma comparação, por exemplo;
+• Osúnicos valores possíveis são:
+
+•True (verdadeiro);
+
+• False(falso);
+
+• consolelog(5 > 2);
+
+• console.log(3>10);
+
+
+
+Booleans: comparações
+
+• Maior que: >
+• Menor que: <
+• Maior ou igual: >=
+• Menor ou igual: <=
+• Igual: ==
+• Diferente: !=
+• Idêntico: ===
+
+
+
+Booleans: operadores lógicos
+• Por meio de uma comparação resultam em um Boolean
+• && - and -> para ser true, os dois 'lados' da comparação precisam ser true
+• or -> para ser true, basta um dos 'lados' da comparação ser true; 
+• ! - not -> inverter os valores (true vira false);
+
+
+Booleans: operadores lógicos exemplos:
+
+• console.log(true && true)
+• console.log(true && false);
+• console.log(false || false)
+• console.log(!true);
+
+
+Booleans: operador ternário
+• Faz um comparativo em apenas uma linha de código;
+• console.log(true? 1:2);
+• console.log(false? 'falso' : 'verdadeiro');
+• Não é muito utilizado e pode deixar o código complicado de ler;

@@ -1,0 +1,16 @@
+
+Numbers: aritmética
+
+• Operação mais feita com os números em JS;
+
+E o resultado da operação aritmética produz um novo Number;
+
+• console.log(2 + 2);
+
+• console.log(2 * 4-3);
+
+• console.log(8/4);
+
+• Funciona com a mesma da matemática;
+
+• console.log(5 + (2 * 4));
