@@ -19,7 +19,7 @@ que desejamos inserir;
 
 • O template literals serve para computar valores também, ex:
 
-• consolelog(`Asoma de 2 + 2 é $(2+2)`);
+• consolelog(`A soma de 2 + 2 é $(2+2)`);
 
 • Concatenação é um processo de “somar' Strings, veja:
 
