@@ -1,0 +1,71 @@
+
+O que são estruturas de controle?
+
+• Um programa é executado de cima para baixo;
+
+• Com as estruturas podemos modelar o fluxo do programa;
+
+• Ou seja, dependendo dos valores de statements e expressions, 
+  ele tomará um caminho diferente;
+
+  //////////////////////////
+
+  
+Estrutura condicional: if
+
+• O programa vai executar um bloco de código, SE algo acontecer;
+
+• Onde algo é a condição imposta por um statement;
+
+• Que resultar em um boolean (true or false);
+
+Let idade 19;
+
+if(idade > 18) {
+console.log('Pode entrar');
+}
+
+/////////////////////////////////////////////////
+
+
+Estrutura condicional: else
+
+• Podemos executar um outro bloco de código, caso a instrução do if
+não seja atendida;
+
+• Ou seja, SE NÃO EXECUTAR o bloco if, EXECUTE o bloco else;
+
+
+Let nome 'Pedro'
+if(nome == 'João') {
+console.log('Seu nome é João');
+} else {
+console.log('O seu nome não é João');
+}
+
+/////////////////////////////////////
+
+
+Estrutura condicional: else if
+• Ainda podemos encadear mais condições com o else if;
+
+• Ou seja, antes de executar um else, ou até mesmo sem ele,
+podemos verificar mais uma condição;
+
+Let a = 5;
+Let b = 3
+
+if(a + b == 3) {
+console.log('O resultado é 3');
+
+ } else if(a == 4) {
+
+console.log('O valor de a é 4');
+ 
+ } else if(b == 3) {
+
+console.log('O valor de b é 3')
+
+} else {
+console.log('Nenhuma das condições acima!');
+}

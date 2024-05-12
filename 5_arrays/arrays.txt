@@ -1,0 +1,459 @@
+
+Arrays
+• Possibilidade de adicionar um conjunto de valores a uma variável;
+
+• O array deve ser escrito entre colchetes, separando os valores por vírgulas, veja:
+
+Let numeros = [1, 3, 5, 8, 12];
+
+Let informacoes = ["Gabriel", 12, true, "Teste", 2];
+
+//////////////////
+
+Mais sobre Arrays
+
+• Podemos acessar um array pelo seu índice, por exemplo:
+• arr[1] Lembrando que o primeiro índice sempre é 0,
+• ou seja, para acessa o primeiro elemento: arr[0]
+
+Let numeros = [1, 3, 5, 8, 12];
+
+Let informacoes = ["Matheus", 12, true, "Teste", 2];
+
+////////////////////////////////////////
+
+
+Propriedades
+
+• Propriedades são informações que podem ser verificadas de um
+valor;
+
+• Quase todos os valores de JavaScript tem propriedades, menos null e undefined
+
+• Podemos acessar as propriedades de duas maneiras:
+
+Let numeros = [1, 3, 5, 8, 12];
+
+console.log(numeros.length);
+console.log(numeros['length']);
+console.log(numeros [3]);
+
+Let nome = 'Matheus';
+console.log(nome.length); // número de caracteres da string
+
+/////////////////////////////////////////////
+
+
+Métodos
+
+• Métodos são propriedades que funcionam como funções;
+
+• Strings e arrays contém métodos;
+
+Let marca = 'Nike';
+
+console.log(typeof marca.toUpperCase);
+
+console.log(marca.toUpperCase());
+
+////////////////////////////////////////////////
+
+
+Objetos
+
+• Uma coleção de propriedades, parecidos com arrays
+
+• Podemos acessar estas propriedades
+
+Let pessoa = {
+
+nome: "Gabriel",
+profissao: "Programador",
+idade: 28,
+
+}
+
+console.log(pessoa.nome);
+console.log(pessoa.idade);
+
+//////////////////////////////////////
+
+
+Objetos: deletando e criando propriedades
+
+• Podemos adicionar e deletar propriedades ao longo do nosso
+programa;
+
+Let carro = {
+
+marca: "VW",
+portas: 4,
+eletrico: false,
+motor: 1.0
+
+}
+
+console.log(carro.portas);
+
+delete carro portas;
+
+console.log(carro.portas);
+
+carro.tetoSolar = true;
+
+console.log(carro.tetoSolar);
+
+///////////////////////////////////////////
+
+
+Objetos: mais sobre objetos
+
+• Podemos copiar todas as propriedades de um obj para outro;
+
+Let objetoA = {
+
+prop1: 'teste',
+
+}
+
+prop2: 'testando',
+
+Let objetoB = {
+
+}
+
+prop3: 'propriedade'
+
+Object.assign(objetoA, objetoB);
+
+console.log(objetoA);
+
+/////////////////////////////
+
+
+Objetos: mais sobre objetos
+
+• E também podemos verificar quais as chaves cada objeto possui;
+
+Let objetoA = {
+
+prop1: 'teste',
+prop2: 'testando',
+
+}
+
+console.log(Object.keys(objetoA));
+
+///////////////////////////////////////
+
+
+Mutação (Mutability)
+
+• Um objeto pode herdar todas as características do outro, virando
+uma referência ao mesmo;
+
+Let objetoA = {
+
+pontos: 10
+
+};
+
+objetoB = objetoA;
+
+Let objetoC = { 
+    
+    pontos: 10
+
+};
+
+console.log(objetoA == objetoB);
+
+console.log(objetoA == objetoC); 
+
+///////////////////////
+
+
+
+Loops em Arrays
+
+• Uma técnica muito utilizada na programação é o loop nos arrays;
+
+• Como é uma lista com muitos valores, muitas vezes precisamos ver cada um deles;
+
+Let numeros = [1,5,10,15,20,25];
+
+for(let i = 0; i <= numeros.length; i++) {
+
+console.log(numeros[i]);
+
+}
+
+////////////////////////////////////////
+
+
+Métodos de array: push e pop
+
+Let pessoas = ["Matheus", "João", "Ricardo"];
+
+Let pessoaRemovida = pessoas.pop();
+
+console.log(pessoas);
+
+console.log(pessoaRemovida);
+
+////////////////////////////////
+
+
+Métodos de array: shift e unshift
+
+• shift: remove o primeiro elemento de um array;
+
+• unshift: adiciona um ou mais elementos no início de um array;
+
+Let frutas = ["Maçã", "Melão", "Uva"];
+
+Let frutaRemovida frutas.shift();
+
+console.log(frutas);
+
+console.log(frutaRemovida);
+
+//////////////////////////////////////
+
+
+Métodos de array: indexOf e lastIndexOf
+
+• indexOf: encontra o índice de um determinado elemento;
+
+• lastIndexOf: encontrar o último índice de um elemento;
+
+Let numeros = [0, 1, 2, 1, 0];
+
+console.log(numeros.indexOf(1));
+
+console.log(numeros.lastIndexOf(1));
+
+////////////////////////////////////////
+
+
+
+Métodos de array: slice
+
+• Retorna um array a partir de outro array;
+
+• O array retornado é determinado pelos parâmetros que são os
+índices de início e fim do novo array;
+
+Let numeros = [0,1,2,3,4,5];
+
+console.log(numeros.slice(2,3));
+
+console.log(numeros.slice(3));
+
+/////////////////////////////////
+
+
+Métodos de array: forEach
+
+• Itera cada elemento do array;
+
+const nums = [1, 2, 3, 4, 5, 6];
+
+nums.forEach(num => {
+console.log(num);
+});
+
+////////////////////////////
+
+Métodos de array: includes
+
+• Verifica se o array tem um determinado elemento;
+
+let carros = ["bmw", "fiat", "audi"];
+
+console.log(carros.incldues("fiat"));
+
+////////////////////////////////////////
+
+
+Métodos de array: reverse
+
+• Inverte um array;
+
+
+let arr = [1,2,3,4,5,6,7,8,9,10];
+
+console.log(arr.reverse());
+
+//////////////////
+
+Métodos de string: trim
+
+• Remove tudo que não é string
+let texto = '     \n teste \n   ';
+
+console.log(texto.trim());
+
+////////////////////////////
+
+Métodos de string: padStart
+
+• Insirir caracteres antes da string;
+
+let milAoContrario = 1;
+
+console.log(milAoContrario.padStart(4, "0"));
+
+////////////////////////////
+
+Métodos de string: split
+
+• Divide uma string por um separador, e retorna um array;
+
+let frase = "O rato roeu a roupa do rei de roma";
+
+let palavras = frase.split(" ");
+
+console.log(palavras);
+
+/////////////////////////////
+
+Métodos de string: join
+
+• Junta elementos de uma array em uma frase, por meio de um separador
+
+
+let fraseMontada = palavras.join('<->');
+console.log(fraseMontada);
+
+////////////////////////////////
+
+Métodos de string: repeat
+
+• Repete uma string de acordo com um parametro number
+
+console.log("teste".repeat(5));
+
+/////////////////////
+
+Rest operator 
+
+• Uma forma de uma funcao receber indefinidos parametros
+
+• O operador rest vai virar um array;
+
+• O parametro é definido por: ...nome
+
+function imprimirNumeros(...args){
+    for(let i = 0 < args.length; i ++) {
+        console.log(args[i]);
+    }
+}
+
+////////////////////////////
+
+
+Destructuring com objetos
+
+• Podemos definir variáveis com propriedades do objeto com uma
+notação diferente, chamada destructuring;
+
+const person = {
+
+name: 'Jhon',
+lastname: 'Doe'
+
+}
+const {name: fname, lastname: Iname} = person;
+
+console.log(fname);
+
+console.log(lname);
+
+/////////////////////////////////
+
+
+Destructuring com array
+
+• Podemos definir variáveis com os valores de um array utilizando
+destructuring;
+
+Let nomes = ['Matheus', 'João', 'Pedro'];
+
+Let [nomeA, nomeB, nomeC] = nomes;
+
+console.log(nomeA);
+
+console.log(nomeB);
+
+console.log(nomeC);
+
+
+//////////////////////////////////////////
+
+
+
+
+JSON
+
+• JSON = JavaScript Object Notation;
+
+• Utilizado para comunicação entre serviços, ex: back end <-> front end
+
+• Basicamente um tipo de dado padronizado, que lembra muito os
+objetos do JavaScript;
+
+
+
+{
+
+"name": "Matheus",
+"age": 29,
+"position": "Developer",
+"languages": ["PHP", "JavaScript", "Python"]
+
+}
+
+//////////////////////////////////////////
+
+
+Mais sobre JSON
+
+• Rigoroso na estrutura, ou seja, você deve seguir o padrão imposto
+por este formato;
+
+• Apenas aspas duplas;
+
+• Não aceita comentários;
+
+{
+
+"name": "Matheus",
+"age": 29,
+"position": "Developer",
+"languages": ["PHP", "JavaScript", "Python"]
+
+}
+
+
+JSON para String
+
+• Podemos converter o JSON para uma string de forma fácil;
+
+• Ou também uma string para JSON;
+
+const car = {
+
+"brand": "BMW",
+"wheels": 4,
+"doors": 2,
+"type": "Sedan"
+}
+
+Let jsonToString = JSON.stringify(car);
+
+console.log(jsonToString);
+
+Let stringToJson = JSON.parse(jsonToString);
+
+console.log(stringToJson);

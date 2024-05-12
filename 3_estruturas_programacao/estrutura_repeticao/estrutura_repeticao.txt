@@ -1,0 +1,130 @@
+O que são estruturas de repetição?
+
+• A ideia é repetir uma ação até atingir uma condição;
+
+• Ao invés de repetirmos o mesmo código várias vezes, criamos um
+statement que fará uma checagem em cada loop;
+
+• Também chamada de loop;
+
+///////////////////////////////////////
+
+
+Estrutura de repetição: while
+• Fará uma ação, até que a condição seja atingida
+
+• Precisamos realmente 'definir um fim' para o loop, para não termos
+o problema de loop infinito;
+
+Let x = 10
+while(x > 0)
+ { console.log(x);
+x = x - 1;
+}
+
+/////////////////////////////////////////
+
+Estrutura de repetição: do while
+
+• Semelhante ao while, porém a estrutura muda um pouco
+
+• Este método quase não é utilizado!
+
+Let y = 0;
+do {
+console.log(y);
+y = y + 1;
+} while(y < 5);
+
+
+/////////////////////////////
+
+Estrutura de repetição: for
+
+• Semelhante ao while, porém amplamente utilizado
+• Na minha opinião: é a estrutura de repetição mais fácil de compreender,
+ aconselho a preferir pelo for
+
+for (let numero 2; numero < 100; numero = numero * 2) {
+console.log("O numero é: " + numero);
+}
+
+//////////////////////////
+
+
+Forçando a saída de um loop: break
+
+• As vezes precisamos parar o loop antes que complete todo o seu ciclo;
+
+• Para isso utilizamos o break;
+
+for(let i = 5; i < 20; i = i + 1) {
+if(i % 10 == 0) {
+console.log('Saiu do loop');
+break;
+}
+console.log('Prosseguindo o loop');
+
+}
+
+////////////////////////////////////////
+
+
+Pulando uma execução do loop: continue
+
+• Dependendo da nossa lógica, podemos pular o resto da execução
+do loop;
+
+• Para isso utilizamos a palavra continue;
+
+Let x = 0
+while(x < 11) {
+x = x + 1;
+if(x % 2 == 0) {
+continue;
+}
+console.log(x);
+x = x + 1;
+}
+
+/////////////////////////
+
+
+Incrementando a variável: forma fácil
+
+• Podemos incrementar uma variável de forma mais fácil: x += 1;
+
+• Ou até mesmo x++;
+
+for(let numero= 0; numero < 10; numero += 1) {
+}
+console.log("O numero é:
++ numero);
+
+
+
+//////////////////////////////
+
+
+Estrutura condicional: switch
+
+• Quando há a necessidade de vários ifs, podemos utilizar o
+switch/case;
+
+• Para sair de um case podemos utilizar o break;
+
+• Podemos inserir uma expressão default, para caso nenhum valor for
+correspondido;
+• Obs: muitos programadores optam por usar vários ifs!
+
+switch (nome) {
+  case "Joao":
+  console.log("O seu nome é joao");
+    break;
+    case "Gabriel":
+  console.log("O seu nome é Gabriel");
+    break;  
+  default:
+  console.log("O seu nome não é Joao e nem Gabriel");
+    break;
+}

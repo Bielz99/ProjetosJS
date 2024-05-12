@@ -1,0 +1,57 @@
+
+A estrutura de uma função:
+
+• Antes de mais nada: funções são chamadas durante o programa;
+
+• Você também pode ouvir: executar, chamar, invocar uma função;
+
+• E nós chamamos a função utilizando o nome dela + abrindo e fechando parênteses;
+
+• nomeDaFuncao();
+
+
+////////////////////////////////////////////////////
+
+
+Função built-in: prompt()
+
+• Recebe um input do usuário do sistema e pode guardar este valor;
+
+• Ex: let idade = prompt('Qual sua idade?');
+
+• console.log(idade);
+
+• Esta função é pouco utilizada.
+
+//////////////////////
+
+Função built-in: alert()
+
+• Exibe uma mensagem na tela do usuário;
+
+• Ex: alert('Veja esta mensagem!');
+
+• Esta função é pouco utilizada.
+
+
+/////////////////////////////////
+
+
+Função built-in: Math.x()
+
+• Função utilizada para expressões/cálculos matemáticos;
+
+• Ex: let maiorNumero = Math.max(1,5,2,3);
+
+• console.log(maiorNumero);
+
+• Esta função é muito utilizada.
+
+//////////////////////////////////////////
+
+
+Função built-in: console.log()
+Exibe uma mensagem na tela, que é o argumento que passamos;
+Ex: console.log('exibindo esta mensagem!');
+Esta função é muito utilizada.
+Veremos como fazer as nossas funções mais a frente;

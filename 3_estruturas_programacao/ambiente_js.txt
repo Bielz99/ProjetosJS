@@ -1,0 +1,36 @@
+
+Como funciona o ambiente JS
+
+• Quando qualquer programa é iniciado, um ambiente é criado;
+
+• E este ambiente não inicia vazio;
+
+• Ele contém funções nativas da linguagem;
+
+• Funções são blocos de código, que nos retornam um valor ou
+ação;
+
+• O ambiente de JavaScript, neste curso, poderiamos entender como o navegador
+
+
+
+Precisamos falar sobre identação
+
+• Serve para organizar o código e deixar mais legível;
+
+• Não há uma regra, porém cada bloco aninhado deve ser identado
+uma vez;
+
+• Pessoas vão te agradecer no futuro por identar o código!
+
+• Para a execução do código não afeta em nada.
+
+
+Let x = 2;
+Let y = 0;
+if(x > 2) {
+y = x + 2;
+if(y == 4) {
+}
+console.log('Y é 4');
+}

@@ -1,0 +1,69 @@
+
+Como salvar valores na memória
+
+• Salvamos os valores em variáveis (isso é um statement);
+
+• let laranjas = 5;
+
+• E depois podemos criar expressões com os valores salvos;
+
+• console.log(laranjas * laranjas);
+
+• console.log(Tem ${laranjas} na cesta`);
+
+
+Podemos também mudar o valor que foi salvo anteriormente;
+
+• laranjas = laranjas + 1;
+
+• console.log(laranjas);
+
+• Um let pode definir várias variáveis também;
+
+• let quadrado = 4, triangulo = 3, retangulo = 4;
+
+• console.log(quadrado * (triangulo + retangulo));
+
+
+Outras maneiras de salvar valor:
+• Podemos definir valores com var e const;
+
+• var nome = 'Pedro';
+
+• console.log(nome);
+
+• const sobrenome = 'Soares';
+
+• console.log(sobrenome);
+
+
+• var é uma forma mais antiga, você deve optar por LET ou CONST;
+
+• const vem de constante, ou seja, o seu valor não pode ser alterado;
+
+
+Convenção no nome das variaveis
+
+• Não pode começar com um número (let 2teste);
+
+• Mas pode terminar com número (let teste9 = 'testando')
+
+• Pode ter $ ou, mas não outros caracteres especiais (let $nome, _nome);
+
+• Mas não pode ter pontuação ou outros especiais (let @teste)
+
+• Podemos iniciar com letra maiúscula (let Nome = 'Gabriel');
+Ou usar camelCase (let meuPrimeiroNome = 'Gabriel');
+
+
+
+Nomes de variáveis reservados:
+
+• Alguns nomes não podem ser utilizados para iniciar variáveis, veja:
+break case catch class const continue debugger default delete do else enum export extends false finally for function if implements import interface in instanceof let new package private protected public return static super switch this throw true try typeof var void while with yield
+
+• Ex: let break = 'parar';
+
+• Porém podemos usar elas + alguma palavra/digito:
+
+• Ex: let breakGabriel = 1;
