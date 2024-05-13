@@ -1,0 +1,386 @@
+
+O que é orientação a objetos?
+
+• Uma forma de programar, que utiliza os objetos como o seu
+principal princípio;
+
+• Além de utilizar conceitos e técnicas que envolvem objetos;
+
+• A maioria dos softwares, na parte de back-end, são desenvolvidos
+em cima desse paradigma;
+
+• Grandes frameworks se aproveitam desta técnica: Laravel,
+Django e etc.
+
+
+Métodos
+
+• Propriedades que servem como funções;
+
+• Ou seja, as ações dos objetos;
+
+• Invocamos os métodos da mesma maneira que funções;
+
+Let cachorro = {
+latir: function() {
+console.log("Au au");
+    }
+}
+
+cachorro.latir();
+
+////////////////////////////////////////////////////
+
+
+Mais sobre Métodos
+
+• Normalmente os métodos interagem com os objetos;
+
+• Até mudando os valores das suas propriedades para corresponder a
+lógica do programa desenvolvido;
+
+Let pessoa = {
+
+ nome: setNome: function (novoNome) {
+ this.nome novoNome;
+
+},
+
+getNome: function() {
+return this.nome;
+
+}
+
+}
+
+pessoa.setNome("Matheus");
+
+console.log(pessoa.getNome());
+
+/////////////////////////////////////////
+
+
+Prototypes
+
+• Um objeto fallback de outro objeto;
+
+• Quando um objeto recebe uma requisição de uma propriedade que
+não tem, ela é procura no prototype deste objeto;
+
+• O prototype de um objeto criado do zero é o Object, que tem os métodos nativos da linguagem;
+Let pessoa = {
+maos: 2
+}
+console.log(Object.getPrototypeOf(pessoa));
+console.log(Object.getPrototypeOf(pessoa) == Object.prototype);
+
+////////////////////////////////////////////////////////
+
+
+Mais sobre Prototypes
+
+• Quando criamos um objeto a partir de um outro, o base será o
+prototype;
+
+• Ele herdará tanto os métodos e propriedades de Object (o prototype
+do objeto base);
+
+• Quanto os do objeto base para este novo;
+
+Let pessoa = {
+
+maos: 2
+
+}
+
+Let pessoaNova = Object.create(pessoa);
+
+console.log(pessoaNova.maos);
+
+console.log(Object.getPrototypeof (pessoaNova) == pessoa);
+
+
+/////////////////////////////////////////////////
+
+
+Classes
+
+• O prototype do JavaScript pode ser chamado de classe;
+
+• Pois nas outras linguagens uma Class é um molde de um objeto;
+
+• Ou seja, podemos criar diversos objetos em cima de um prototype
+
+Let cachorro = {
+
+raca: 'SRD',
+
+}
+
+Let pastorAlemao = Object.create(cachorro);
+
+pastorAlemao.raca = 'Pastor Alemão';
+
+console.log(pastorAlemao.raca);
+
+//////////////////////////////////
+
+
+Classes: construtor por função
+
+• Construtores são formas de instanciar uma classe em uma
+linguagem de programação;
+
+• Instanciar = criar um objeto novo;
+
+• No construtor já podemos definir propriedades;
+
+function criarCachorro (raca) {
+
+Let cachorro = Object.create({});
+ 
+ cachorro.raca = raca;
+ return cachorro;
+
+}
+
+Let doberman = criarCachorro('Doberman');
+
+console.log(doberman.raca);
+
+////////////////////////////////
+
+
+Classes: construtor por new
+
+• Em muitas linguagens temos a possibilidade de instanciar um
+objeto com new, no JS também;
+
+function Cachorro (raca) {
+    this.raca = raca;
+
+}
+Let husky = new Cachorro ('Husky');
+
+console.log(husky.raca);
+
+//////////////////////////////////////////////
+
+
+Classes: construtor com método
+
+• Além de propriedades, podemos criar a classe base já com métodos;
+
+• Basta definir ao prototype o método desejado;
+
+function Cachorro (raca) {
+    this.raca raca;
+
+}
+Cachorro.prototype.uivar = function()
+
+ { console.log('Auuuuuuuu');
+
+}
+
+Let pug = new Cachorro ('Pug');
+
+console.log(pug.raca);
+pug.uivar();
+
+
+///////////////////////////////////////////////////
+
+
+Construtor na classe (ES6)
+
+• Com a versão do ES6, uma possibilidade de criar uma classe (objeto)
+com construtor foi adicionada;
+
+• Então não precisamos mais criar por meio de uma função, veja:
+
+class Cachorro {
+
+constructor(raca) {
+
+this.raca raca;
+
+}
+
+}
+
+Let labrador = new Cachorro ('Labrador');
+
+console.log(labrador.raca);
+
+/////////////////////////////////
+
+
+Mais sobre classes
+
+• Não podemos adicionar propriedades na classe, só via prototype;
+
+• A classe só aceita métodos;
+
+class Cachorro {
+
+constructor (raca) {
+
+this.raca = raca;
+
+}
+
+latir() {
+console.log("Au au");
+
+}
+
+}
+
+Cachorro.prototype.patas = 4;
+
+//////////////////////////////////////
+
+
+Override nas propriedades do Prototype
+
+• Sempre que adicionamos uma propriedade a um objeto, é criada
+uma idêntica no Prototype;
+
+• Podemos substituir a do prototype;
+
+class Cachorro {
+
+constructor(raca) {
+
+this.raca raca;
+
+}
+
+}
+
+Let poodle = new Cachorro ('Poodle');
+
+Cachorro.prototype.raca = 'SRD';
+
+console.log(poodle.raca);
+
+///////////////////////////////////
+
+
+Symbols
+
+• Propriedades únicas, que não podem ser alteradas e nem criadas
+duas vezes;
+
+• Podemos utilizar como uma constante, só que para propriedade de
+objeto;
+
+class Cachorro {
+
+constructor(raca) {
+this.raca = raca;
+}
+}
+Let patas Symbol();
+
+Cachorro.prototype [patas] = 4;
+
+Let golden = new Cachorro('Golden Retriever');
+
+
+////////////////////////////////////////////////////////////////
+
+
+Getters e setters
+
+• Get: serve para resgatar o valor de uma propriedade;
+
+• Set: serve para alterar o valor de uma propriedade;
+
+class Cachorro {
+
+constructor(raca) { this.raca = raca;
+
+}
+
+get verRaca() {
+
+return 'A raça é ' + this.raca;
+
+}
+
+set novaRaca(value) {
+
+this.raca = value;
+
+}
+
+}
+
+Let golden = new Cachorro ('Pastor Alemão');
+
+console.log(golden.verRaca);
+
+golden.novaRaca 'Golden':
+
+////////////////////////////
+
+
+
+Herança (inheritance)
+
+• Uma classe pode herdar propriedades de outra classe por herança
+
+• Para isso utilizamos extends;
+
+class Mamifero {
+
+constructor(patas) {
+this.patas patas;
+
+}
+
+}
+
+class Cachorro extends Mamifero {
+
+constructor(patas, raca) {
+
+super(patas, patas);
+this.raca = raca;
+
+}
+
+}
+
+Let pug = new Cachorro(4, 'Pug');
+
+console.log(pug);
+
+/////////////////////////////////////////
+
+
+Instanceof operator
+
+• Podemos verificar quem é o pai do objeto utilizando o instanceof;
+
+class Mamifero {
+
+constructor(patas) { this.patas = patas;
+
+}
+
+}
+
+class Cachorro extends Mamifero {
+
+constructor(patas, raca) {
+
+super(patas, patas); 
+this.raca = raca;
+
+}
+
+}
+console.log(new Cachorro instanceof Mamifero);
