@@ -1,0 +1,204 @@
+
+O que é bug e debug?
+
+• Bug: Problema que ocorre no código, muitas vezes por erro do programador, que impede o funcionamento correto do mesmo;
+
+• Debug: O ato de resolver os bugs encontrados no código ou também a forma que é feita a visualização de valores de variáveis ou fluxo do código;
+
+
+///////////////////////////
+
+
+Strict mode
+
+• Deixa o JavaScript mais rigoroso na hora de se programar;
+
+• Deve ser declarado no topo de arquivos ou funções;
+
+• Colocar o strict ajuda você a codificar de forma correta e não vai
+impedir/limitar nada no seu software ou programar;
+
+• Veja o exemplo de uma variável declarada sem let/const/var:
+
+"use strict"
+opa = 'teste';
+Uncaught ReferenceError: opa is not defined at window.onload ((index):34)
+
+//////////////////////////////////////////////
+
+
+Método de debug: console.log
+
+• Um método bastante utilizada para debug, é o console.log;
+
+• Função que estávamos utilizando para mostrar os valores no
+console;
+
+Let a = 1;
+Let b = 2;
+if(a == 1) {
+a = b + 2;
+}
+
+console.log(a);
+
+for(i = 0; i < b; i++) {
+    
+     a = a + 2;
+    console.log(a);
+
+}
+if(a > 10) {
+a == 25;
+}
+
+///////////////////////////////////////////
+
+
+
+Método de debug: debugger
+
+• Funcionalidade que para o código quando atingir a linha debugger;
+
+
+
+Let a = 1;
+Let b = 2;
+
+if(a == 1) {
+
+a = b + 2;
+
+}
+
+for(i = 0; i < b; i++) {
+
+a = a + 2;
+
+}
+
+debugger;
+
+if(a > 10) {
+ 
+ a == 25;
+
+}
+
+/////////////////////////////////
+
+
+Tratamento de input por função
+• Não podemos controlar os dados que o usuário enviar, então para o bom funcionamento do software, devemos tratar eles;
+
+• Veja um exemplo de tratamento de number:
+
+function checarNumero (valor) {
+    
+Let resultado = Number(valor);
+if(Number.isNaN(resultado))
+    return null;
+{ 
+
+} else {
+return resultado;
+
+}
+
+}
+console.log(checar Numero (5));
+
+console.log(checarNumero('teste'));
+
+
+/////////////////////////////////////////////////////////////////
+
+
+Exceptions
+
+• Podemos criar erros no programa, caso alguma condição não seja
+atendida;
+
+•  Porém as exceptions abortam o programa, só geram o erro;
+
+Let a = 1;
+
+if(a != 2) {
+
+throw new Error("O valor de a não pode ser 1′′);
+
+}
+
+
+
+
+Try e catch
+
+• O bloco try catch, vai tentar executar um código, caso não consiga
+ele pode retornar o erro que esse código gerou;
+
+• Muito útil para debug;
+
+try {
+
+Let ca+b;
+
+} catch(error) {
+
+console.log("Algo deu errado: " + error);
+
+}
+
+
+Finally
+
+• Finally é executada independente do resultado do try/catch;
+
+• E pode existir com try e catch ou apenas try;
+
+try {
+
+Let c = a + b;
+
+} catch(error) {
+
+console.log("Algo deu errado: " + error);
+
+} finally {
+
+console.log("Executou")
+
+}
+
+
+Assertions
+
+• Verificações no programa, que são utilizadas para assegurar que
+tudo ocorra da forma esperada;
+
+• function iterarArray(arr) {
+
+    if(arr.length == 0) {
+
+    throw new Error("O array precisa ter elementos");
+
+} else {
+    
+    for (let i - 0; i < arr.length; i++) {
+    console.log(arr[i]);
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
