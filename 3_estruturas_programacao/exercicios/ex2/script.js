@@ -4,8 +4,11 @@
 // Insira uma instrução console.log("Pode entrar"), caso a pessoa tenha
 // mais que 18 anos;
 
+// Declaração e inicialização da variável 'idade' com um valor de exemplo
 let idade = 28;
 
+// Estrutura if que verifica se a idade é maior ou igual a 18
 if (idade >= 18) {
-  console.log("Pode entrar");
+  // Se a condição for verdadeira, executa o bloco de código dentro das chaves
+  console.log("Pode entrar"); // Imprime "Pode entrar" no console
 }
