@@ -108,3 +108,15 @@ function iterarArray(arr) {
 
 iterarArray(arr);
 iterarArray(arr2);
+
+// Esse código contém várias seções com diferentes exemplos e práticas de JavaScript. Vamos analisá-las uma por uma:
+
+// "use strict";: Isso ativa o modo estrito do JavaScript, que é uma forma mais restrita e segura de escrever código JavaScript. Por exemplo, proíbe o uso de variáveis não declaradas.
+
+// Variáveis e Operações: Esta seção demonstra o uso de variáveis (a, b, c) e operações matemáticas básicas. Usa estruturas de controle como if e for para fazer comparações e loops.
+
+// Tratamento de Exceções: Aqui, um bloco try...catch é utilizado para capturar e lidar com possíveis erros que podem ocorrer durante a execução do código. O bloco finally é opcional e é executado sempre, independentemente de ocorrer uma exceção ou não.
+
+// Funções: Esta seção mostra a definição e chamada de funções. A função iterarArray itera sobre os elementos de um array, lançando um erro se o array estiver vazio.
+
+// Cada seção demonstra uma parte diferente da linguagem JavaScript e práticas comuns, como manipulação de variáveis, controle de fluxo, tratamento de erros e definição de funções.
