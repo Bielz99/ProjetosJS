@@ -9,8 +9,8 @@ let onibus = {
   portas: 2,
 };
 
-(onibus.janelas = 20), delete onibus.portas;
-console.log(onibus.rodas);
-console.log(onibus.limitePassageiro);
-console.log(onibus.portas);
+onibus.janelas = 20; // Adiciona a propriedade 'janelas' com o valor 20
+delete onibus.rodas; // Deleta a propriedade 'rodas'
+
+// Imprime a propriedade 'janelas' no console
 console.log(onibus.janelas);

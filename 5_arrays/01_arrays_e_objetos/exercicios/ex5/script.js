@@ -3,10 +3,14 @@
 // • Verifique se o seu nome existe no array;
 // Se existir imprima alguma mensagem no console;
 
+// Cria um array com 5 nomes
 let nomes = ["João", "Gabriel", "Zorzan", "Santos"];
 
+// Verifica se o nome "Gabriel" existe no array
 if (nomes.includes("Gabriel")) {
-  console.log("Nome gabriel");
+  // Se existir, imprime uma mensagem no console
+  console.log("Nome Gabriel encontrado no array!");
 } else {
-  console.log("Não existe seu nome");
+  // Se não existir, imprime outra mensagem no console
+  console.log("Seu nome não está na lista.");
 }
